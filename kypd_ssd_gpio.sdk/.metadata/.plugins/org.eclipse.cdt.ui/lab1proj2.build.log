@@ -1,0 +1,34 @@
+15:26:20 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/freertos_hello_world.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'prvTxTask':
+../src/freertos_hello_world.c:132:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:222:19: warning: unused variable 'xDelay1500ms' [-Wunused-variable]
+  const TickType_t xDelay1500ms = pdMS_TO_TICKS(1500UL);
+                   ^~~~~~~~~~~~
+../src/freertos_hello_world.c:219:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+Finished building: ../src/freertos_hello_world.c
+ 
+Building target: lab1proj2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab1proj_bsp/ps7_cortexa9_0/lib -o "lab1proj2.elf" ./src/freertos_hello_world.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: lab1proj2.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lab1proj2.elf  |tee "lab1proj2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  80904	   3448	  89456	 173808	  2a6f0	lab1proj2.elf
+Finished building: lab1proj2.elf.size
+ 
+
+15:26:20 Build Finished (took 162ms)
+
