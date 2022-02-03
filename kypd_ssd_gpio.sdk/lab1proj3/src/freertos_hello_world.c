@@ -1,186 +1,309 @@
 /*
-    Copyright (C) 2017 Amazon.com, Inc. or its affiliates.  All Rights Reserved.
-    Copyright (C) 2012 - 2018 Xilinx, Inc. All Rights Reserved.
+ *  ECE- 315 WINTER 2021 - COMPUTER INTERFACING COURSE
+ *
+ *  Created on	: 	15 July, 2021
+ *  Author		: 	Shyama M. Gandhi, Mazen Elbaz
+ *
+ * -----------------------------------------------------------------------------------------------------
+ * IMPLEMENTATION OF A SIMPLE CALCULATOR.
+ * Inputs Operands from the keypad
+ * Output of the arithmetic operation is displayed on the Console
+ * This exercise of the lab does not use SSD!!!
+ * Operations available : +, -, * and palindrome, selected using the keys A, B, C and D, respectively.
+ *
+ * The design of this exercise is as follows:
+ * Say, you wish to calculate (978 X 4050)
+ * So, you enter 9, press 7, press 8 and then F so that the operand will be registered. Do the same for second operand of 4050.
+ * In case while entering the operand, if you commit any error, you can press 'E' key any time to enter the operand again.
+ * Once you have entered two operands, press any key from A, B, C or D to choose the corresponding operation.
+ * So, the sequence of inputs you entered is, enter one operand, enter second operand and then enter the operation using the (A/B/C/D) key.
+ * The calculator is designed in a way that you enter the operands first and then select the operation as a third value to the Queue.
+ * The corresponding output will be displayed on the console.
+ * 32-bit variables are used to store the input as well as output and overflow will generate a wrong output. You must detect the overflow condition for +, - and * operation.
+ *
+ * For subtraction, you may use store_operands[1]-store_operands[0] or vice versa.
+ * For palindrome, two operands are taken as an input. Four results are possible: both operands are palindrome, operand 1 is palindrome but operand 2 is not. Operand 2 is palindrome but
+ * operand 1 is not. Both operands are non-palindrome numbers. For any case, display the result on the console. However, for the case when both the operands are palindrome,
+ * a White light on RGB led must glow for 1.5 seconds.
+ * The initialization and required definitions for RGB led GPIO has been provided as you read along the template.
+ * -----------------------------------------------------------------------------------------------------
+ *
+ */
 
-    Permission is hereby granted, free of charge, to any person obtaining a copy of
-    this software and associated documentation files (the "Software"), to deal in
-    the Software without restriction, including without limitation the rights to
-    use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
-    the Software, and to permit persons to whom the Software is furnished to do so,
-    subject to the following conditions:
 
-    The above copyright notice and this permission notice shall be included in all
-    copies or substantial portions of the Software. If you wish to use our Amazon
-    FreeRTOS name, please do so in a fair use way that does not cause confusion.
-
-    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
-    FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
-    COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
-    IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
-    CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-    http://www.FreeRTOS.org
-    http://aws.amazon.com/freertos
-
-
-    1 tab == 4 spaces!
-*/
-
-/* FreeRTOS includes. */
+//Include FreeRTOS Library
 #include "FreeRTOS.h"
 #include "task.h"
 #include "queue.h"
-#include "timers.h"
-/* Xilinx includes. */
-#include "xil_printf.h"
-#include "xparameters.h"
 
-#define TIMER_ID	1
-#define DELAY_10_SECONDS	10000UL
-#define DELAY_1_SECOND		1000UL
-#define TIMER_CHECK_THRESHOLD	9
-/*-----------------------------------------------------------*/
+#include "xparameters.h"
+#include "xgpio.h"
+#include "xscugic.h"
+#include "xil_exception.h"
+#include "xil_printf.h"
+
+#include "pmodkypd.h"
+#include "sleep.h"
+#include "xil_cache.h"
+#include "math.h"
 
 /* The Tx and Rx tasks as described at the top of this file. */
 static void prvTxTask( void *pvParameters );
 static void prvRxTask( void *pvParameters );
-static void vTimerCallback( TimerHandle_t pxTimer );
-/*-----------------------------------------------------------*/
 
-/* The queue used by the Tx and Rx tasks, as described at the top of this
-file. */
+/* Palindrome helper functions */
+char isPalindrome(const u32 operand);
+void printPalindrome(const u32 opNum, const char result);
+
+void DemoInitialize();
+u32 SSD_decode(u8 key_value, u8 cathode);
+
+PmodKYPD myDevice;
+
 static TaskHandle_t xTxTask;
 static TaskHandle_t xRxTask;
 static QueueHandle_t xQueue = NULL;
-static TimerHandle_t xTimer = NULL;
-char HWstring[15] = "Hello World";
-long RxtaskCntr = 0;
 
-int main( void )
-{
-	const TickType_t x10seconds = pdMS_TO_TICKS( DELAY_10_SECONDS );
+//GPIO Variable RGBLED
+XGpio RGBInst;
 
-	xil_printf( "Hello from Freertos example main\r\n" );
+#define DEFAULT_KEYTABLE "0FED789C456B123A"
 
-	/* Create the two tasks.  The Tx task is given a lower priority than the
-	Rx task, so the Rx task will leave the Blocked state and pre-empt the Tx
-	task as soon as the Tx task places an item in the queue. */
-	xTaskCreate( 	prvTxTask, 					/* The function that implements the task. */
-					( const char * ) "Tx", 		/* Text name for the task, provided to assist debugging only. */
-					configMINIMAL_STACK_SIZE, 	/* The stack allocated to the task. */
-					NULL, 						/* The task parameter is not used, so set to NULL. */
-					tskIDLE_PRIORITY,			/* The task runs at the idle priority. */
-					&xTxTask );
+//GPIO Parameter definitions from xparameters.h
+#define RGBLED_DEVICE_ID 	XPAR_AXI_GPIO_RGB_LED_DEVICE_ID
 
-	xTaskCreate( prvRxTask,
-				 ( const char * ) "GB",
-				 configMINIMAL_STACK_SIZE,
-				 NULL,
-				 tskIDLE_PRIORITY + 1,
-				 &xRxTask );
+#define WHITE_IN_RGB		7
 
-	/* Create the queue used by the tasks.  The Rx task has a higher priority
-	than the Tx task, so will preempt the Tx task and remove values from the
-	queue as soon as the Tx task writes to the queue - therefore the queue can
-	never have more than one item in it. */
-	xQueue = xQueueCreate( 	1,						/* There is only one space in the queue. */
-							sizeof( HWstring ) );	/* Each space in the queue is large enough to hold a uint32_t. */
+#define MAX_U32 4294967295
 
-	/* Check the queue was created. */
-	configASSERT( xQueue );
-
-	/* Create a timer with a timer expiry of 10 seconds. The timer would expire
-	 after 10 seconds and the timer call back would get called. In the timer call back
-	 checks are done to ensure that the tasks have been running properly till then.
-	 The tasks are deleted in the timer call back and a message is printed to convey that
-	 the example has run successfully.
-	 The timer expiry is set to 10 seconds and the timer set to not auto reload. */
-	xTimer = xTimerCreate( (const char *) "Timer",
-							x10seconds,
-							pdFALSE,
-							(void *) TIMER_ID,
-							vTimerCallback);
-	/* Check the timer was created. */
-	configASSERT( xTimer );
-
-	/* start the timer with a block time of 0 ticks. This means as soon
-	   as the schedule starts the timer will start running and will expire after
-	   10 seconds */
-	xTimerStart( xTimer, 0 );
-
-	/* Start the tasks and timer running. */
-	vTaskStartScheduler();
-
-	/* If all is well, the scheduler will now be running, and the following line
-	will never be reached.  If the following line does execute, then there was
-	insufficient FreeRTOS heap memory available for the idle and/or timer tasks
-	to be created.  See the memory management section on the FreeRTOS web site
-	for more details. */
-	for( ;; );
+void DemoInitialize() {
+   KYPD_begin(&myDevice, XPAR_AXI_GPIO_PMOD_KEYPAD_BASEADDR);
+   KYPD_loadKeyTable(&myDevice, (u8*) DEFAULT_KEYTABLE);
 }
 
+// MAIN FUNCTION
+int main (void)
+{
+  int status;
+
+  xil_printf("System Ready!\n");
+
+  // Initialize RGB LED
+  status = XGpio_Initialize(&RGBInst, RGBLED_DEVICE_ID);
+  if(status != XST_SUCCESS){
+	  xil_printf("GPIO Initialization for RGB LED unsuccessful.\r\n");
+	  return XST_FAILURE;
+  }
+
+  // Set RGB LED direction to output
+  XGpio_SetDataDirection(&RGBInst, 1, 0x00);
+
+  /* Create the two tasks.  The Tx task is given a higher priority than the
+  Rx task. Dynamically changing the priority of Rx Task later on so the Rx task will leave the Blocked state and pre-empt the Tx
+  task as soon as the Tx task fills the queue. */
+
+  xTaskCreate( prvTxTask,					/* The function that implements the task. */
+    			( const char * ) "Tx", 		/* Text name for the task, provided to assist debugging only. */
+    			configMINIMAL_STACK_SIZE, 	/* The stack allocated to the task. */
+    			NULL, 						/* The task parameter is not used, so set to NULL. */
+    			tskIDLE_PRIORITY+2,			/* The task runs at the idle priority. */
+    			&xTxTask );
+
+  xTaskCreate( prvRxTask,
+    			( const char * ) "Rx",
+				configMINIMAL_STACK_SIZE,
+				NULL,
+    			tskIDLE_PRIORITY + 1,
+    			&xRxTask );
+
+  /* Create the queue used by the tasks. */
+  xQueue = xQueueCreate( 3,				/* There are three items in the queue, two operands and then operation using keypad */
+		  	  sizeof( unsigned int ) );	/* Each space in the queue is large enough to hold a uint32_t. */
+
+  /* Check the queue was created. */
+  configASSERT(xQueue);
+
+  DemoInitialize();
+
+  vTaskStartScheduler();
+
+  while(1);
+
+  return 0;
+}
 
 /*-----------------------------------------------------------*/
 static void prvTxTask( void *pvParameters )
 {
-const TickType_t x1second = pdMS_TO_TICKS( DELAY_1_SECOND );
+	UBaseType_t uxPriority;
 
-	for( ;; )
-	{
-		/* Delay for 1 second. */
-		vTaskDelay( x1second );
+	for( ;; ) {
+	   u16 keystate;
+	   XStatus status, last_status = KYPD_NO_KEY;
+	   u8 key, last_key = 'x';
+	   u32 factor = 0, current_value = 0;
 
-		/* Send the next value on the queue.  The queue should always be
-		empty at this point so a block time of 0 is used. */
-		xQueueSend( xQueue,			/* The queue being written to. */
-					HWstring, /* The address of the data being sent. */
-					0UL );			/* The block time. */
+	   Xil_Out32(myDevice.GPIO_addr, 0xF);
+	   xil_printf("PMOD KYPD demo started. Press any key on the Keypad.\r\n");
+
+	   uxPriority = uxTaskPriorityGet( NULL );
+
+	   while (1) {
+
+	      // Capture state of each key
+	      keystate = KYPD_getKeyStates(&myDevice);
+
+	      // Determine which single key is pressed, if any
+	      status = KYPD_getKeyPressed(&myDevice, keystate, &key);
+
+	      //this functions returns the number of entries in the queue, so when the queue is full, i.e., 2 entries, decreased the priority of this task and hence receive task
+	      //will immediately start to execute.
+	      if(uxQueueMessagesWaiting( xQueue ) == 3){
+
+			  /*********************************/
+	    	  // enter the function to dynamically change the priority when queue is full. This way when the queue is full here, we change the priority of this task
+	    	  // and hence queue will be read in the receive task to perform the operation. If you change the priority here dynamically, make sure in the receive task to do the counter part!!!
+	    	  /*********************************/
+	      }
+
+	      // Print key detect if a new key is pressed or if status has changed
+	      if (status == KYPD_SINGLE_KEY
+	            && (status != last_status || key != last_key)) {
+	         xil_printf("Key Pressed: %c\r\n", (char) key);
+	         last_key = key;
+
+	         //whenever 'F' is pressed, the aggregated number will be registered as an operand
+	         if((char)key == 'F'){
+	        	 xil_printf("Final current_value of operand= %d\n",current_value);
+
+	        	 /*******************************/
+	        	 //write the logic to enter the updated variable here to the Queue
+	        	 /*******************************/
+	        	 xQueueSend(xQueue, &current_value, 0);
+
+		         current_value = 0;
+	         }
+	         //if 'E' is pressed, it resets the current value of the operand and allows the user to enter a new value
+	         else if((char)key == 'E'){
+	        	 xil_printf("current_value of operand has been reset. Please enter the new value.\n");
+
+	        	 factor = 0;
+	        	 current_value = 0;
+	         }
+	         //case when we consider input key strokes from '0' to '9' (only these are the valid key inputs for all the four operations)
+			 //the current_value is aggregated as the user presses consecutive digits
+	         //e.g. if the user presses the following digits in this order 4 > 5 > 8  => current_value will end up being 458
+	         else if(key>='0' && key<='9'){
+	        	 factor = (int)(key - '0');
+	        	 current_value = current_value*10 + factor;
+	        	 xil_printf("current_value = %d\n",current_value);
+	         }
+	         else if((uxQueueMessagesWaiting( xQueue ) == 2) &&(
+					 (char)key == 'A' ||
+					 (char)key == 'B' ||
+					 (char)key == 'C' ||
+					 (char)key == 'D')){
+
+				 /*****************************************/
+	        	 //once two operands are in the queue, enter the third value to the queue to indicate the operation to be performed using A,B,C or D key
+	        	 //store the current key value to the queue as the third element
+	        	 /*****************************************/
+	        	 xQueueSend(xQueue, &current_value, 0);
+
+		         current_value = 0;
+	         }
+	      }
+	      else if (status == KYPD_MULTI_KEY && status != last_status)
+	         xil_printf("Error: Multiple keys pressed\r\n"); //this is valid whenever two or more keys are pressed together
+
+	      last_status = status;
+	      usleep(1000);
+	   }
 	}
 }
-
 /*-----------------------------------------------------------*/
 static void prvRxTask( void *pvParameters )
 {
-char Recdstring[15] = "";
+	UBaseType_t uxPriority;
+	uxPriority = uxTaskPriorityGet( NULL );
+
+	const TickType_t xDelay1500ms = pdMS_TO_TICKS(1500UL);
+
+	u32 operandA, operandB;
 
 	for( ;; )
 	{
-		/* Block to wait for data arriving on the queue. */
-		xQueueReceive( 	xQueue,				/* The queue being read. */
-						Recdstring,	/* Data is read into this address. */
-						portMAX_DELAY );	/* Wait without a timeout for data. */
+		/***************************************/
+		//...Write code here to read the three elements from the queue and perform the required operation.
+		//...Display the output result on the console for all the four operations.
+		//...If you have dynamically changed the priority of this task in TxTask, you need to change the priority here accordingly, respectively using vTaskPrioritySet(). This can be done after
+		//	 you finish calculation part.
+		//...This way once the RxTask is done, TxTask will have a higher priority and hence will wait for the next series of inputs from the user
+		//...You can write a switch-case statement or if-else statements for each different operation
+		//...For the Palindrome check, think of a way to find the reverse of each operand (two loops for each operand!) Compared this reverse operand with the original operand.
+		//...For RGB led, look at the function that was used in previous labs for writing the value to the led. Initialization and color definition is already provided to you in this file.
+		/***************************************/
 
-		/* Print the received data. */
-		xil_printf( "Rx task received string from Tx task: %s\r\n", Recdstring );
-		RxtaskCntr++;
+		u32 item;
+		xQueueReceive(xQueue, &item, 0);
+
+		switch (uxQueueMessagesWaiting( xQueue )) {
+		case 2:
+			operandA = item;
+			break;
+		case 1:
+			operandB = item;
+			break;
+		case 0:
+			switch ((char)item) {
+			case 'A':
+				if (MAX_U32 - operandA < operandB)
+					xil_printf("ERROR: Addition overflow for operands: %u, %u\r\n", operandA, operandB);
+				else
+					xil_printf("%u + %u = %u\r\n", operandA, operandB, operandA + operandB);
+				break;
+			case 'B':
+				// Subtraction of unsigned integers cannot overflow, however we need to be careful of how the sign bit is handled
+				if (operandA > operandB)
+					xil_printf("%u - %u = %u\r\n", operandA, operandB, operandA - operandB);
+				else
+					xil_printf("%u - %u = %d\r\n", operandA, operandB, operandA - operandB);
+				break;
+			case 'C':
+				if (MAX_U32 / operandA < operandB)
+					xil_printf("ERROR: Multiplication overflow for operands: %u, %u\r\n", operandA, operandB);
+				else
+					xil_printf("%u * %u = %u\r\n", operandA, operandB, operandA * operandB);
+				break;
+			case 'D': {
+				char opAisP = isPalindrome(operandA);
+				char opBisP = isPalindrome(operandB);
+				if (!(opAisP && opBisP)) {
+					printPalindrome(1, opAisP);
+					printPalindrome(2, opBisP);
+				} else {
+					xil_printf("Both operands are palindromes!\r\n");
+				}
+				break;
+			}
+			}
+		}
 	}
 }
 
-/*-----------------------------------------------------------*/
-static void vTimerCallback( TimerHandle_t pxTimer )
-{
-	long lTimerId;
-	configASSERT( pxTimer );
+void printPalindrome(const u32 opNum, const char result) {
+	xil_printf("Operator %u is ", opNum);
+	if (!result)
+		xil_printf("not ");
+	xil_printf("a palindrome!\r\n");
+}
 
-	lTimerId = ( long ) pvTimerGetTimerID( pxTimer );
-
-	if (lTimerId != TIMER_ID) {
-		xil_printf("FreeRTOS Hello World Example FAILED");
+char isPalindrome(const u32 operand) {
+	u32 buffer = operand, reverse = 0;
+	while (buffer > 0) {
+		reverse = (reverse * 10) + (buffer % 10);
+		buffer /= 10;
 	}
-
-	/* If the RxtaskCntr is updated every time the Rx task is called. The
-	 Rx task is called every time the Tx task sends a message. The Tx task
-	 sends a message every 1 second.
-	 The timer expires after 10 seconds. We expect the RxtaskCntr to at least
-	 have a value of 9 (TIMER_CHECK_THRESHOLD) when the timer expires. */
-	if (RxtaskCntr >= TIMER_CHECK_THRESHOLD) {
-		xil_printf("FreeRTOS Hello World Example PASSED");
-	} else {
-		xil_printf("FreeRTOS Hello World Example FAILED");
-	}
-
-	vTaskDelete( xRxTask );
-	vTaskDelete( xTxTask );
+	return buffer == operand;
 }
 
