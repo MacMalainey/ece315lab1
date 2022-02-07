@@ -164,6 +164,7 @@ static void prvTxTask( void *pvParameters )
 	    	  // enter the function to dynamically change the priority when queue is full. This way when the queue is full here, we change the priority of this task
 	    	  // and hence queue will be read in the receive task to perform the operation. If you change the priority here dynamically, make sure in the receive task to do the counter part!!!
 	    	  /*********************************/
+	    	  vTaskPrioritySet(NULL, tskIDLE_PRIORITY);
 	      }
 
 	      // Print key detect if a new key is pressed or if status has changed
@@ -208,7 +209,7 @@ static void prvTxTask( void *pvParameters )
 	        	 //once two operands are in the queue, enter the third value to the queue to indicate the operation to be performed using A,B,C or D key
 	        	 //store the current key value to the queue as the third element
 	        	 /*****************************************/
-	        	 xQueueSend(xQueue, &current_value, 0);
+	        	 xQueueSend(xQueue, &key, 0);
 
 		         current_value = 0;
 	         }
@@ -248,44 +249,50 @@ static void prvRxTask( void *pvParameters )
 		xQueueReceive(xQueue, &item, 0);
 
 		switch (uxQueueMessagesWaiting( xQueue )) {
-		case 2:
-			operandA = item;
-			break;
-		case 1:
-			operandB = item;
-			break;
-		case 0:
-			switch ((char)item) {
-			case 'A':
-				if (MAX_U32 - operandA < operandB)
-					xil_printf("ERROR: Addition overflow for operands: %u, %u\r\n", operandA, operandB);
-				else
-					xil_printf("%u + %u = %u\r\n", operandA, operandB, operandA + operandB);
+			case 2:
+				operandA = item;
 				break;
-			case 'B':
-				// Subtraction of unsigned integers cannot overflow, however we need to be careful of how the sign bit is handled
-				if (operandA > operandB)
-					xil_printf("%u - %u = %u\r\n", operandA, operandB, operandA - operandB);
-				else
-					xil_printf("%u - %u = %d\r\n", operandA, operandB, operandA - operandB);
+			case 1:
+				operandB = item;
 				break;
-			case 'C':
-				if (MAX_U32 / operandA < operandB)
-					xil_printf("ERROR: Multiplication overflow for operands: %u, %u\r\n", operandA, operandB);
-				else
-					xil_printf("%u * %u = %u\r\n", operandA, operandB, operandA * operandB);
-				break;
-			case 'D': {
-				char opAisP = isPalindrome(operandA);
-				char opBisP = isPalindrome(operandB);
-				if (!(opAisP && opBisP)) {
-					printPalindrome(1, opAisP);
-					printPalindrome(2, opBisP);
-				} else {
-					xil_printf("Both operands are palindromes!\r\n");
+			case 0: {
+				switch ((char)item) {
+					case 'A':
+						if (MAX_U32 - operandA < operandB)
+							xil_printf("ERROR: Addition overflow for operands: %u, %u\r\n", operandA, operandB);
+						else
+							xil_printf("%u + %u = %u\r\n", operandA, operandB, operandA + operandB);
+						break;
+					case 'B':
+						// Subtraction of unsigned integers cannot overflow, however we need to be careful of how the sign bit is handled
+						if (operandA > operandB)
+							xil_printf("%u - %u = %u\r\n", operandA, operandB, operandA - operandB);
+						else
+							xil_printf("%u - %u = %d\r\n", operandA, operandB, operandA - operandB);
+						break;
+					case 'C':
+						if (MAX_U32 / operandA < operandB)
+							xil_printf("ERROR: Multiplication overflow for operands: %u, %u\r\n", operandA, operandB);
+						else
+							xil_printf("%u * %u = %u\r\n", operandA, operandB, operandA * operandB);
+						break;
+					case 'D': {
+						char opAisP = isPalindrome(operandA);
+						char opBisP = isPalindrome(operandB);
+						if (!(opAisP && opBisP)) {
+							printPalindrome(1, opAisP);
+							printPalindrome(2, opBisP);
+						} else {
+							xil_printf("Both operands are palindromes!\r\n");
+							XGpio_DiscreteWrite(&RGBInst, 1, WHITE_IN_RGB);
+							vTaskDelay(xDelay1500ms);
+							XGpio_DiscreteWrite(&RGBInst, 1, 0);
+						}
+						break;
+					}
 				}
-				break;
-			}
+				// Here the priority of the RX task is reset
+				vTaskPrioritySet(xTxTask, tskIDLE_PRIORITY + 2);
 			}
 		}
 	}
@@ -304,6 +311,6 @@ char isPalindrome(const u32 operand) {
 		reverse = (reverse * 10) + (buffer % 10);
 		buffer /= 10;
 	}
-	return buffer == operand;
+	return reverse == operand;
 }
 
