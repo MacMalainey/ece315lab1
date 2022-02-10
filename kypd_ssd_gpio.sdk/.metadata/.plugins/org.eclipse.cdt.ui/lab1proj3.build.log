@@ -1,23 +1,36 @@
-15:26:04 **** Auto Build of configuration Debug for project lab1proj3 ****
+16:10:52 **** Auto Build of configuration Debug for project lab1proj3 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
- 
-Building file: ../src/pmodkypd.c
-Invoking: ARM v7 gcc compiler
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'prvTxTask':
+../src/freertos_hello_world.c:138:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:228:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building file: ../src/pmodkypd.c'
+'Invoking: ARM v7 gcc compiler'
 arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/pmodkypd.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/pmodkypd.d" -MT"src/pmodkypd.o" -o "src/pmodkypd.o" "../src/pmodkypd.c"
-Finished building: ../src/pmodkypd.c
- 
-Building target: lab1proj3.elf
-Invoking: ARM v7 gcc linker
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab1proj_bsp/ps7_cortexa9_0/lib -o "lab1proj3.elf" ./src/freertos_hello_world.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
-Finished building target: lab1proj3.elf
- 
-Invoking: ARM v7 Print Size
+'Finished building: ../src/pmodkypd.c'
+' '
+'Building target: lab1proj3.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab1proj_bsp/ps7_cortexa9_0/lib -o "lab1proj3.elf"  ./src/freertos_hello_world.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: lab1proj3.elf'
+' '
+'Invoking: ARM v7 Print Size'
 arm-none-eabi-size lab1proj3.elf  |tee "lab1proj3.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  79244	   3388	  89424	 172056	  2a018	lab1proj3.elf
-Finished building: lab1proj3.elf.size
- 
+  82344	   3448	  89456	 175248	  2ac90	lab1proj3.elf
+'Finished building: lab1proj3.elf.size'
+' '
 
-15:26:04 Build Finished (took 162ms)
+16:10:57 Build Finished (took 5s.691ms)
 

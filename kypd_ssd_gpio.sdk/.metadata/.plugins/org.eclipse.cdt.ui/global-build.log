@@ -901,3 +901,1287 @@ arm-none-eabi-size lab1proj2.elf  |tee "lab1proj2.elf.size"
   80904	   3448	  89456	 173808	  2a6f0	lab1proj2.elf
 Finished building: lab1proj2.elf.size
  
+16:10:09 **** Auto Build of project lab1proj_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/freertos10_xilinx_v1_3/src"
+make -C ps7_cortexa9_0/libsrc/freertos10_xilinx_v1_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"include"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_4/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v4_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling coresightps_dcc"
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/freertos10_xilinx_v1_3/src"
+make -C ps7_cortexa9_0/libsrc/freertos10_xilinx_v1_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling standalone"
+"Compiling FreeRTOS"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_4/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v4_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling xadcps"
+'Finished building libraries'
+16:10:51 **** Clean-only build of configuration Debug for project lab1proj3 ****
+make clean 
+rm -rf  ./src/freertos_hello_world.o ./src/pmodkypd.o  ./src/freertos_hello_world.d ./src/pmodkypd.d  lab1proj3.elf.size  lab1proj3.elf
+' '
+16:10:52 **** Auto Build of configuration Debug for project lab1proj3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'prvTxTask':
+../src/freertos_hello_world.c:138:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:228:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building file: ../src/pmodkypd.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/pmodkypd.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/pmodkypd.d" -MT"src/pmodkypd.o" -o "src/pmodkypd.o" "../src/pmodkypd.c"
+'Finished building: ../src/pmodkypd.c'
+' '
+'Building target: lab1proj3.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab1proj_bsp/ps7_cortexa9_0/lib -o "lab1proj3.elf"  ./src/freertos_hello_world.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: lab1proj3.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab1proj3.elf  |tee "lab1proj3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  82344	   3448	  89456	 175248	  2ac90	lab1proj3.elf
+'Finished building: lab1proj3.elf.size'
+' '
+16:10:58 **** Clean-only build of configuration Debug for project lab1proj2 ****
+make clean 
+rm -rf  ./src/freertos_hello_world.o ./src/pmodkypd.o  ./src/freertos_hello_world.d ./src/pmodkypd.d  lab1proj2.elf.size  lab1proj2.elf
+' '
+16:10:58 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'prvTxTask':
+../src/freertos_hello_world.c:132:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:222:19: warning: unused variable 'xDelay1500ms' [-Wunused-variable]
+  const TickType_t xDelay1500ms = pdMS_TO_TICKS(1500UL);
+                   ^~~~~~~~~~~~
+../src/freertos_hello_world.c:219:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building file: ../src/pmodkypd.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/pmodkypd.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/pmodkypd.d" -MT"src/pmodkypd.o" -o "src/pmodkypd.o" "../src/pmodkypd.c"
+'Finished building: ../src/pmodkypd.c'
+' '
+'Building target: lab1proj2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab1proj_bsp/ps7_cortexa9_0/lib -o "lab1proj2.elf"  ./src/freertos_hello_world.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: lab1proj2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab1proj2.elf  |tee "lab1proj2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  80904	   3448	  89456	 173808	  2a6f0	lab1proj2.elf
+'Finished building: lab1proj2.elf.size'
+' '
+16:11:01 **** Auto Build of configuration Debug for project lab1proj ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building file: ../src/pmodkypd.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/pmodkypd.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/pmodkypd.d" -MT"src/pmodkypd.o" -o "src/pmodkypd.o" "../src/pmodkypd.c"
+'Finished building: ../src/pmodkypd.c'
+' '
+'Building target: lab1proj.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab1proj_bsp/ps7_cortexa9_0/lib -o "lab1proj.elf"  ./src/freertos_hello_world.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: lab1proj.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab1proj.elf  |tee "lab1proj.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  80964	   3448	  89456	 173868	  2a72c	lab1proj.elf
+'Finished building: lab1proj.elf.size'
+' '
+00:12:03 **** Clean-only build of configuration Debug for project lab1proj2 ****
+make clean 
+rm -rf  ./src/freertos_hello_world.o ./src/pmodkypd.o  ./src/freertos_hello_world.d ./src/pmodkypd.d  lab1proj2.elf.size  lab1proj2.elf
+' '
+00:12:04 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'prvTxTask':
+../src/freertos_hello_world.c:132:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:224:19: warning: unused variable 'xDelay1500ms' [-Wunused-variable]
+  const TickType_t xDelay1500ms = pdMS_TO_TICKS(1500UL);
+                   ^~~~~~~~~~~~
+../src/freertos_hello_world.c:221:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building file: ../src/pmodkypd.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/pmodkypd.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/pmodkypd.d" -MT"src/pmodkypd.o" -o "src/pmodkypd.o" "../src/pmodkypd.c"
+'Finished building: ../src/pmodkypd.c'
+' '
+'Building target: lab1proj2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab1proj_bsp/ps7_cortexa9_0/lib -o "lab1proj2.elf"  ./src/freertos_hello_world.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: lab1proj2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab1proj2.elf  |tee "lab1proj2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  80904	   3448	  89456	 173808	  2a6f0	lab1proj2.elf
+'Finished building: lab1proj2.elf.size'
+' '
+00:13:21 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'prvTxTask':
+../src/freertos_hello_world.c:163:26: warning: passing argument 1 of 'vTaskPrioritySet' from incompatible pointer type [-Wincompatible-pointer-types]
+         vTaskPrioritySet(prvRxTask, uxPriority + 1);
+                          ^~~~~~~~~
+In file included from ../src/freertos_hello_world.c:36:
+../../lab1proj_bsp/ps7_cortexa9_0/include/task.h:1005:37: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'} but argument is of type 'void (*)(void *)'
+ void vTaskPrioritySet( TaskHandle_t xTask, UBaseType_t uxNewPriority ) PRIVILEGED_FUNCTION;
+                        ~~~~~~~~~~~~~^~~~~
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:225:19: warning: unused variable 'xDelay1500ms' [-Wunused-variable]
+  const TickType_t xDelay1500ms = pdMS_TO_TICKS(1500UL);
+                   ^~~~~~~~~~~~
+../src/freertos_hello_world.c:222:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: lab1proj2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab1proj_bsp/ps7_cortexa9_0/lib -o "lab1proj2.elf"  ./src/freertos_hello_world.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: lab1proj2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab1proj2.elf  |tee "lab1proj2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  80968	   3448	  89456	 173872	  2a730	lab1proj2.elf
+'Finished building: lab1proj2.elf.size'
+' '
+00:13:27 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'prvTxTask':
+../src/freertos_hello_world.c:163:26: warning: passing argument 1 of 'vTaskPrioritySet' from incompatible pointer type [-Wincompatible-pointer-types]
+         vTaskPrioritySet(prvRxTask, uxPriority + 1)
+                          ^~~~~~~~~
+In file included from ../src/freertos_hello_world.c:36:
+../../lab1proj_bsp/ps7_cortexa9_0/include/task.h:1005:37: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'} but argument is of type 'void (*)(void *)'
+ void vTaskPrioritySet( TaskHandle_t xTask, UBaseType_t uxNewPriority ) PRIVILEGED_FUNCTION;
+                        ~~~~~~~~~~~~~^~~~~
+../src/freertos_hello_world.c:163:52: error: expected ';' before '}' token
+         vTaskPrioritySet(prvRxTask, uxPriority + 1)
+                                                    ^
+                                                    ;
+        }
+        ~                                            
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:225:19: warning: unused variable 'xDelay1500ms' [-Wunused-variable]
+  const TickType_t xDelay1500ms = pdMS_TO_TICKS(1500UL);
+                   ^~~~~~~~~~~~
+../src/freertos_hello_world.c:222:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+make: *** [src/subdir.mk:26: src/freertos_hello_world.o] Error 1
+00:13:32 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'prvTxTask':
+../src/freertos_hello_world.c:163:26: warning: passing argument 1 of 'vTaskPrioritySet' from incompatible pointer type [-Wincompatible-pointer-types]
+         vTaskPrioritySet(prvRxTask, uxPriority + 1);
+                          ^~~~~~~~~
+In file included from ../src/freertos_hello_world.c:36:
+../../lab1proj_bsp/ps7_cortexa9_0/include/task.h:1005:37: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'} but argument is of type 'void (*)(void *)'
+ void vTaskPrioritySet( TaskHandle_t xTask, UBaseType_t uxNewPriority ) PRIVILEGED_FUNCTION;
+                        ~~~~~~~~~~~~~^~~~~
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:225:19: warning: unused variable 'xDelay1500ms' [-Wunused-variable]
+  const TickType_t xDelay1500ms = pdMS_TO_TICKS(1500UL);
+                   ^~~~~~~~~~~~
+../src/freertos_hello_world.c:222:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: lab1proj2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab1proj_bsp/ps7_cortexa9_0/lib -o "lab1proj2.elf"  ./src/freertos_hello_world.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: lab1proj2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab1proj2.elf  |tee "lab1proj2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  80968	   3448	  89456	 173872	  2a730	lab1proj2.elf
+'Finished building: lab1proj2.elf.size'
+' '
+00:15:24 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:225:19: warning: unused variable 'xDelay1500ms' [-Wunused-variable]
+  const TickType_t xDelay1500ms = pdMS_TO_TICKS(1500UL);
+                   ^~~~~~~~~~~~
+../src/freertos_hello_world.c:222:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: lab1proj2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab1proj_bsp/ps7_cortexa9_0/lib -o "lab1proj2.elf"  ./src/freertos_hello_world.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: lab1proj2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab1proj2.elf  |tee "lab1proj2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  80968	   3448	  89456	 173872	  2a730	lab1proj2.elf
+'Finished building: lab1proj2.elf.size'
+' '
+00:40:00 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:229:19: warning: unused variable 'xDelay1500ms' [-Wunused-variable]
+  const TickType_t xDelay1500ms = pdMS_TO_TICKS(1500UL);
+                   ^~~~~~~~~~~~
+../src/freertos_hello_world.c:226:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: lab1proj2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab1proj_bsp/ps7_cortexa9_0/lib -o "lab1proj2.elf"  ./src/freertos_hello_world.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: lab1proj2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab1proj2.elf  |tee "lab1proj2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  81032	   3448	  89456	 173936	  2a770	lab1proj2.elf
+'Finished building: lab1proj2.elf.size'
+' '
+00:44:47 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'prvTxTask':
+../src/freertos_hello_world.c:215:12: error: expected ';' before 'current_value'
+            current_value = 0;
+            ^~~~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:232:19: warning: unused variable 'xDelay1500ms' [-Wunused-variable]
+  const TickType_t xDelay1500ms = pdMS_TO_TICKS(1500UL);
+                   ^~~~~~~~~~~~
+../src/freertos_hello_world.c:229:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+make: *** [src/subdir.mk:26: src/freertos_hello_world.o] Error 1
+00:45:04 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:233:19: warning: unused variable 'xDelay1500ms' [-Wunused-variable]
+  const TickType_t xDelay1500ms = pdMS_TO_TICKS(1500UL);
+                   ^~~~~~~~~~~~
+../src/freertos_hello_world.c:230:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: lab1proj2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab1proj_bsp/ps7_cortexa9_0/lib -o "lab1proj2.elf"  ./src/freertos_hello_world.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: lab1proj2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab1proj2.elf  |tee "lab1proj2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  81032	   3448	  89456	 173936	  2a770	lab1proj2.elf
+'Finished building: lab1proj2.elf.size'
+' '
+00:49:02 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:237:7: warning: unused variable 'operator' [-Wunused-variable]
+  char operator;
+       ^~~~~~~~
+../src/freertos_hello_world.c:236:15: warning: unused variable 'op2' [-Wunused-variable]
+  u32 op1 = 0, op2 = 0;
+               ^~~
+../src/freertos_hello_world.c:236:6: warning: unused variable 'op1' [-Wunused-variable]
+  u32 op1 = 0, op2 = 0;
+      ^~~
+../src/freertos_hello_world.c:233:19: warning: unused variable 'xDelay1500ms' [-Wunused-variable]
+  const TickType_t xDelay1500ms = pdMS_TO_TICKS(1500UL);
+                   ^~~~~~~~~~~~
+../src/freertos_hello_world.c:230:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: lab1proj2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab1proj_bsp/ps7_cortexa9_0/lib -o "lab1proj2.elf"  ./src/freertos_hello_world.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: lab1proj2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab1proj2.elf  |tee "lab1proj2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  81032	   3448	  89456	 173936	  2a770	lab1proj2.elf
+'Finished building: lab1proj2.elf.size'
+' '
+00:49:09 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:237:7: warning: unused variable 'operator' [-Wunused-variable]
+  char operator;
+       ^~~~~~~~
+../src/freertos_hello_world.c:236:11: warning: unused variable 'op2' [-Wunused-variable]
+  u32 op1, op2;
+           ^~~
+../src/freertos_hello_world.c:236:6: warning: unused variable 'op1' [-Wunused-variable]
+  u32 op1, op2;
+      ^~~
+../src/freertos_hello_world.c:233:19: warning: unused variable 'xDelay1500ms' [-Wunused-variable]
+  const TickType_t xDelay1500ms = pdMS_TO_TICKS(1500UL);
+                   ^~~~~~~~~~~~
+../src/freertos_hello_world.c:230:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: lab1proj2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab1proj_bsp/ps7_cortexa9_0/lib -o "lab1proj2.elf"  ./src/freertos_hello_world.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: lab1proj2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab1proj2.elf  |tee "lab1proj2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  81032	   3448	  89456	 173936	  2a770	lab1proj2.elf
+'Finished building: lab1proj2.elf.size'
+' '
+00:50:11 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:233:19: warning: unused variable 'xDelay1500ms' [-Wunused-variable]
+  const TickType_t xDelay1500ms = pdMS_TO_TICKS(1500UL);
+                   ^~~~~~~~~~~~
+../src/freertos_hello_world.c:230:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: lab1proj2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab1proj_bsp/ps7_cortexa9_0/lib -o "lab1proj2.elf"  ./src/freertos_hello_world.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: lab1proj2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab1proj2.elf  |tee "lab1proj2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  81096	   3448	  89456	 174000	  2a7b0	lab1proj2.elf
+'Finished building: lab1proj2.elf.size'
+' '
+00:53:31 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'prvTxTask':
+../src/freertos_hello_world.c:195:9: error: expected expression before ')' token
+      if(){
+         ^
+../src/freertos_hello_world.c:150:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:281:7: warning: unused variable 'm_s_b' [-Wunused-variable]
+   u32 m_s_b = SSD_decode(msb, 1);
+       ^~~~~
+../src/freertos_hello_world.c:280:7: warning: unused variable 'l_s_b' [-Wunused-variable]
+   u32 l_s_b = SSD_decode(lsb, 0);
+       ^~~~~
+make: *** [src/subdir.mk:26: src/freertos_hello_world.o] Error 1
+00:59:58 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'main':
+../src/freertos_hello_world.c:110:36: error: expected expression before ')' token
+   XGpio_SetDataDirection(&BTNInst, );
+                                    ^
+../src/freertos_hello_world.c:110:3: error: too few arguments to function 'XGpio_SetDataDirection'
+   XGpio_SetDataDirection(&BTNInst, );
+   ^~~~~~~~~~~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+../../lab1proj_bsp/ps7_cortexa9_0/include/xgpio.h:177:6: note: declared here
+ void XGpio_SetDataDirection(XGpio *InstancePtr, unsigned Channel,
+      ^~~~~~~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'prvTxTask':
+../src/freertos_hello_world.c:197:9: error: expected expression before ')' token
+      if(){
+         ^
+../src/freertos_hello_world.c:152:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:283:7: warning: unused variable 'm_s_b' [-Wunused-variable]
+   u32 m_s_b = SSD_decode(msb, 1);
+       ^~~~~
+../src/freertos_hello_world.c:282:7: warning: unused variable 'l_s_b' [-Wunused-variable]
+   u32 l_s_b = SSD_decode(lsb, 0);
+       ^~~~~
+make: *** [src/subdir.mk:26: src/freertos_hello_world.o] Error 1
+01:06:52 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'prvTxTask':
+../src/freertos_hello_world.c:197:9: error: expected expression before ')' token
+      if(){
+         ^
+../src/freertos_hello_world.c:152:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:283:7: warning: unused variable 'm_s_b' [-Wunused-variable]
+   u32 m_s_b = SSD_decode(msb, 1);
+       ^~~~~
+../src/freertos_hello_world.c:282:7: warning: unused variable 'l_s_b' [-Wunused-variable]
+   u32 l_s_b = SSD_decode(lsb, 0);
+       ^~~~~
+make: *** [src/subdir.mk:26: src/freertos_hello_world.o] Error 1
+01:07:07 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'prvTxTask':
+../src/freertos_hello_world.c:197:9: error: expected expression before ')' token
+      if(){
+         ^
+../src/freertos_hello_world.c:152:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:283:7: warning: unused variable 'm_s_b' [-Wunused-variable]
+   u32 m_s_b = SSD_decode(msb, 1);
+       ^~~~~
+../src/freertos_hello_world.c:282:7: warning: unused variable 'l_s_b' [-Wunused-variable]
+   u32 l_s_b = SSD_decode(lsb, 0);
+       ^~~~~
+make: *** [src/subdir.mk:26: src/freertos_hello_world.o] Error 1
+01:07:19 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'prvTxTask':
+../src/freertos_hello_world.c:197:9: error: expected expression before ')' token
+      if(){
+         ^
+../src/freertos_hello_world.c:152:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:283:7: warning: unused variable 'm_s_b' [-Wunused-variable]
+   u32 m_s_b = SSD_decode(msb, 1);
+       ^~~~~
+../src/freertos_hello_world.c:282:7: warning: unused variable 'l_s_b' [-Wunused-variable]
+   u32 l_s_b = SSD_decode(lsb, 0);
+       ^~~~~
+make: *** [src/subdir.mk:26: src/freertos_hello_world.o] Error 1
+01:07:25 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'prvTxTask':
+../src/freertos_hello_world.c:197:9: error: expected expression before ')' token
+      if(){
+         ^
+../src/freertos_hello_world.c:152:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:283:7: warning: unused variable 'm_s_b' [-Wunused-variable]
+   u32 m_s_b = SSD_decode(msb, 1);
+       ^~~~~
+../src/freertos_hello_world.c:282:7: warning: unused variable 'l_s_b' [-Wunused-variable]
+   u32 l_s_b = SSD_decode(lsb, 0);
+       ^~~~~
+make: *** [src/subdir.mk:26: src/freertos_hello_world.o] Error 1
+01:07:31 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'prvTxTask':
+../src/freertos_hello_world.c:197:9: error: expected expression before ')' token
+      if(){
+         ^
+../src/freertos_hello_world.c:152:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:283:7: warning: unused variable 'm_s_b' [-Wunused-variable]
+   u32 m_s_b = SSD_decode(msb, 1);
+       ^~~~~
+../src/freertos_hello_world.c:282:7: warning: unused variable 'l_s_b' [-Wunused-variable]
+   u32 l_s_b = SSD_decode(lsb, 0);
+       ^~~~~
+make: *** [src/subdir.mk:26: src/freertos_hello_world.o] Error 1
+01:07:33 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'prvTxTask':
+../src/freertos_hello_world.c:197:9: error: expected expression before ')' token
+      if(){
+         ^
+../src/freertos_hello_world.c:152:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:283:7: warning: unused variable 'm_s_b' [-Wunused-variable]
+   u32 m_s_b = SSD_decode(msb, 1);
+       ^~~~~
+../src/freertos_hello_world.c:282:7: warning: unused variable 'l_s_b' [-Wunused-variable]
+   u32 l_s_b = SSD_decode(lsb, 0);
+       ^~~~~
+make: *** [src/subdir.mk:26: src/freertos_hello_world.o] Error 1
+01:09:42 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'prvTxTask':
+../src/freertos_hello_world.c:197:9: error: expected expression before ')' token
+      if(){
+         ^
+../src/freertos_hello_world.c:152:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:283:7: warning: unused variable 'm_s_b' [-Wunused-variable]
+   u32 m_s_b = SSD_decode(msb, 1);
+       ^~~~~
+../src/freertos_hello_world.c:282:7: warning: unused variable 'l_s_b' [-Wunused-variable]
+   u32 l_s_b = SSD_decode(lsb, 0);
+       ^~~~~
+make: *** [src/subdir.mk:26: src/freertos_hello_world.o] Error 1
+01:10:37 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'prvTxTask':
+../src/freertos_hello_world.c:197:9: error: expected expression before ')' token
+      if(){
+         ^
+../src/freertos_hello_world.c:152:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:283:7: warning: unused variable 'm_s_b' [-Wunused-variable]
+   u32 m_s_b = SSD_decode(msb, 1);
+       ^~~~~
+../src/freertos_hello_world.c:282:7: warning: unused variable 'l_s_b' [-Wunused-variable]
+   u32 l_s_b = SSD_decode(lsb, 0);
+       ^~~~~
+make: *** [src/subdir.mk:26: src/freertos_hello_world.o] Error 1
+01:10:43 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'prvTxTask':
+../src/freertos_hello_world.c:198:9: error: expected expression before ')' token
+      if(){
+         ^
+../src/freertos_hello_world.c:152:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:284:7: warning: unused variable 'm_s_b' [-Wunused-variable]
+   u32 m_s_b = SSD_decode(msb, 1);
+       ^~~~~
+../src/freertos_hello_world.c:283:7: warning: unused variable 'l_s_b' [-Wunused-variable]
+   u32 l_s_b = SSD_decode(lsb, 0);
+       ^~~~~
+make: *** [src/subdir.mk:26: src/freertos_hello_world.o] Error 1
+01:12:34 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'prvTxTask':
+../src/freertos_hello_world.c:199:9: error: expected expression before ')' token
+      if(){
+         ^
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:285:7: warning: unused variable 'm_s_b' [-Wunused-variable]
+   u32 m_s_b = SSD_decode(msb, 1);
+       ^~~~~
+../src/freertos_hello_world.c:284:7: warning: unused variable 'l_s_b' [-Wunused-variable]
+   u32 l_s_b = SSD_decode(lsb, 0);
+       ^~~~~
+make: *** [src/subdir.mk:26: src/freertos_hello_world.o] Error 1
+01:12:45 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'prvTxTask':
+../src/freertos_hello_world.c:201:9: error: expected expression before ')' token
+      if(){
+         ^
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:287:7: warning: unused variable 'm_s_b' [-Wunused-variable]
+   u32 m_s_b = SSD_decode(msb, 1);
+       ^~~~~
+../src/freertos_hello_world.c:286:7: warning: unused variable 'l_s_b' [-Wunused-variable]
+   u32 l_s_b = SSD_decode(lsb, 0);
+       ^~~~~
+make: *** [src/subdir.mk:26: src/freertos_hello_world.o] Error 1
+01:12:52 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'prvTxTask':
+../src/freertos_hello_world.c:201:9: error: expected expression before ')' token
+      if(){
+         ^
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:287:7: warning: unused variable 'm_s_b' [-Wunused-variable]
+   u32 m_s_b = SSD_decode(msb, 1);
+       ^~~~~
+../src/freertos_hello_world.c:286:7: warning: unused variable 'l_s_b' [-Wunused-variable]
+   u32 l_s_b = SSD_decode(lsb, 0);
+       ^~~~~
+make: *** [src/subdir.mk:26: src/freertos_hello_world.o] Error 1
+01:14:21 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:287:7: warning: unused variable 'm_s_b' [-Wunused-variable]
+   u32 m_s_b = SSD_decode(msb, 1);
+       ^~~~~
+../src/freertos_hello_world.c:286:7: warning: unused variable 'l_s_b' [-Wunused-variable]
+   u32 l_s_b = SSD_decode(lsb, 0);
+       ^~~~~
+../src/freertos_hello_world.c:258:3: warning: 'btn_value' is used uninitialized in this function [-Wuninitialized]
+   switch(btn_value){
+   ^~~~~~
+../src/freertos_hello_world.c:259:32: warning: 'store_operands[0]' may be used uninitialized in this function [-Wmaybe-uninitialized]
+   case 1: result=store_operands[0]^store_operands[1]; break;
+                  ~~~~~~~~~~~~~~^~~
+../src/freertos_hello_world.c:259:50: warning: 'store_operands[1]' may be used uninitialized in this function [-Wmaybe-uninitialized]
+   case 1: result=store_operands[0]^store_operands[1]; break;
+                                    ~~~~~~~~~~~~~~^~~
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: lab1proj2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab1proj_bsp/ps7_cortexa9_0/lib -o "lab1proj2.elf"  ./src/freertos_hello_world.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: lab1proj2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab1proj2.elf  |tee "lab1proj2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  81728	   3448	  89472	 174648	  2aa38	lab1proj2.elf
+'Finished building: lab1proj2.elf.size'
+' '
+01:19:36 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:290:7: warning: unused variable 'm_s_b' [-Wunused-variable]
+   u32 m_s_b = SSD_decode(msb, 1);
+       ^~~~~
+../src/freertos_hello_world.c:289:7: warning: unused variable 'l_s_b' [-Wunused-variable]
+   u32 l_s_b = SSD_decode(lsb, 0);
+       ^~~~~
+../src/freertos_hello_world.c:261:3: warning: 'btn_value' is used uninitialized in this function [-Wuninitialized]
+   switch(btn_value){
+   ^~~~~~
+../src/freertos_hello_world.c:262:32: warning: 'store_operands[0]' may be used uninitialized in this function [-Wmaybe-uninitialized]
+   case 1: result=store_operands[0]^store_operands[1]; break;
+                  ~~~~~~~~~~~~~~^~~
+../src/freertos_hello_world.c:262:50: warning: 'store_operands[1]' may be used uninitialized in this function [-Wmaybe-uninitialized]
+   case 1: result=store_operands[0]^store_operands[1]; break;
+                                    ~~~~~~~~~~~~~~^~~
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: lab1proj2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab1proj_bsp/ps7_cortexa9_0/lib -o "lab1proj2.elf"  ./src/freertos_hello_world.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: lab1proj2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab1proj2.elf  |tee "lab1proj2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  81728	   3448	  89472	 174648	  2aa38	lab1proj2.elf
+'Finished building: lab1proj2.elf.size'
+' '
+01:22:33 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:251:39: warning: passing argument 2 of 'xQueueReceive' makes pointer from integer without a cast [-Wint-conversion]
+   xQueueReceive(xQueue, store_operands[0], 0);
+                         ~~~~~~~~~~~~~~^~~
+In file included from ../src/freertos_hello_world.c:29:
+../../lab1proj_bsp/ps7_cortexa9_0/include/queue.h:868:62: note: expected 'void * const' but argument is of type 'u32' {aka 'long unsigned int'}
+ BaseType_t xQueueReceive( QueueHandle_t xQueue, void * const pvBuffer, TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+                                                 ~~~~~~~~~~~~~^~~~~~~~
+../src/freertos_hello_world.c:291:7: warning: unused variable 'm_s_b' [-Wunused-variable]
+   u32 m_s_b = SSD_decode(msb, 1);
+       ^~~~~
+../src/freertos_hello_world.c:290:7: warning: unused variable 'l_s_b' [-Wunused-variable]
+   u32 l_s_b = SSD_decode(lsb, 0);
+       ^~~~~
+../src/freertos_hello_world.c:251:39: warning: 'store_operands[0]' is used uninitialized in this function [-Wuninitialized]
+   xQueueReceive(xQueue, store_operands[0], 0);
+                         ~~~~~~~~~~~~~~^~~
+../src/freertos_hello_world.c:262:3: warning: 'btn_value' is used uninitialized in this function [-Wuninitialized]
+   switch(btn_value){
+   ^~~~~~
+../src/freertos_hello_world.c:263:32: warning: 'store_operands[0]' may be used uninitialized in this function [-Wmaybe-uninitialized]
+   case 1: result=store_operands[0]^store_operands[1]; break;
+                  ~~~~~~~~~~~~~~^~~
+../src/freertos_hello_world.c:263:50: warning: 'store_operands[1]' may be used uninitialized in this function [-Wmaybe-uninitialized]
+   case 1: result=store_operands[0]^store_operands[1]; break;
+                                    ~~~~~~~~~~~~~~^~~
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: lab1proj2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab1proj_bsp/ps7_cortexa9_0/lib -o "lab1proj2.elf"  ./src/freertos_hello_world.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: lab1proj2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab1proj2.elf  |tee "lab1proj2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  81792	   3448	  89472	 174712	  2aa78	lab1proj2.elf
+'Finished building: lab1proj2.elf.size'
+' '
+01:25:04 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:251:39: warning: passing argument 2 of 'xQueueReceive' makes pointer from integer without a cast [-Wint-conversion]
+   xQueueReceive(xQueue, store_operands[0], 0);
+                         ~~~~~~~~~~~~~~^~~
+In file included from ../src/freertos_hello_world.c:29:
+../../lab1proj_bsp/ps7_cortexa9_0/include/queue.h:868:62: note: expected 'void * const' but argument is of type 'u32' {aka 'long unsigned int'}
+ BaseType_t xQueueReceive( QueueHandle_t xQueue, void * const pvBuffer, TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+                                                 ~~~~~~~~~~~~~^~~~~~~~
+../src/freertos_hello_world.c:291:7: warning: unused variable 'm_s_b' [-Wunused-variable]
+   u32 m_s_b = SSD_decode(msb, 1);
+       ^~~~~
+../src/freertos_hello_world.c:290:7: warning: unused variable 'l_s_b' [-Wunused-variable]
+   u32 l_s_b = SSD_decode(lsb, 0);
+       ^~~~~
+../src/freertos_hello_world.c:251:39: warning: 'store_operands[0]' is used uninitialized in this function [-Wuninitialized]
+   xQueueReceive(xQueue, store_operands[0], 0);
+                         ~~~~~~~~~~~~~~^~~
+../src/freertos_hello_world.c:262:3: warning: 'btn_value' is used uninitialized in this function [-Wuninitialized]
+   switch(btn_value){
+   ^~~~~~
+../src/freertos_hello_world.c:263:32: warning: 'store_operands[0]' may be used uninitialized in this function [-Wmaybe-uninitialized]
+   case 1: result=store_operands[0]^store_operands[1]; break;
+                  ~~~~~~~~~~~~~~^~~
+../src/freertos_hello_world.c:263:50: warning: 'store_operands[1]' may be used uninitialized in this function [-Wmaybe-uninitialized]
+   case 1: result=store_operands[0]^store_operands[1]; break;
+                                    ~~~~~~~~~~~~~~^~~
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: lab1proj2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab1proj_bsp/ps7_cortexa9_0/lib -o "lab1proj2.elf"  ./src/freertos_hello_world.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: lab1proj2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab1proj2.elf  |tee "lab1proj2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  81792	   3448	  89472	 174712	  2aa78	lab1proj2.elf
+'Finished building: lab1proj2.elf.size'
+' '
+01:25:22 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:291:7: warning: unused variable 'm_s_b' [-Wunused-variable]
+   u32 m_s_b = SSD_decode(msb, 1);
+       ^~~~~
+../src/freertos_hello_world.c:290:7: warning: unused variable 'l_s_b' [-Wunused-variable]
+   u32 l_s_b = SSD_decode(lsb, 0);
+       ^~~~~
+../src/freertos_hello_world.c:262:3: warning: 'btn_value' is used uninitialized in this function [-Wuninitialized]
+   switch(btn_value){
+   ^~~~~~
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: lab1proj2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab1proj_bsp/ps7_cortexa9_0/lib -o "lab1proj2.elf"  ./src/freertos_hello_world.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: lab1proj2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab1proj2.elf  |tee "lab1proj2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  81792	   3448	  89472	 174712	  2aa78	lab1proj2.elf
+'Finished building: lab1proj2.elf.size'
+' '
+01:25:42 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:292:7: warning: unused variable 'm_s_b' [-Wunused-variable]
+   u32 m_s_b = SSD_decode(msb, 1);
+       ^~~~~
+../src/freertos_hello_world.c:291:7: warning: unused variable 'l_s_b' [-Wunused-variable]
+   u32 l_s_b = SSD_decode(lsb, 0);
+       ^~~~~
+../src/freertos_hello_world.c:263:3: warning: 'btn_value' is used uninitialized in this function [-Wuninitialized]
+   switch(btn_value){
+   ^~~~~~
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: lab1proj2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab1proj_bsp/ps7_cortexa9_0/lib -o "lab1proj2.elf"  ./src/freertos_hello_world.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: lab1proj2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab1proj2.elf  |tee "lab1proj2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  81792	   3448	  89472	 174712	  2aa78	lab1proj2.elf
+'Finished building: lab1proj2.elf.size'
+' '
+01:35:00 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:290:7: warning: unused variable 'm_s_b' [-Wunused-variable]
+   u32 m_s_b = SSD_decode(msb, 1);
+       ^~~~~
+../src/freertos_hello_world.c:289:7: warning: unused variable 'l_s_b' [-Wunused-variable]
+   u32 l_s_b = SSD_decode(lsb, 0);
+       ^~~~~
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: lab1proj2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab1proj_bsp/ps7_cortexa9_0/lib -o "lab1proj2.elf"  ./src/freertos_hello_world.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: lab1proj2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab1proj2.elf  |tee "lab1proj2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  81792	   3448	  89472	 174712	  2aa78	lab1proj2.elf
+'Finished building: lab1proj2.elf.size'
+' '
+01:37:57 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:293:7: warning: unused variable 'm_s_b' [-Wunused-variable]
+   u32 m_s_b = SSD_decode(msb, 1);
+       ^~~~~
+../src/freertos_hello_world.c:292:7: warning: unused variable 'l_s_b' [-Wunused-variable]
+   u32 l_s_b = SSD_decode(lsb, 0);
+       ^~~~~
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: lab1proj2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab1proj_bsp/ps7_cortexa9_0/lib -o "lab1proj2.elf"  ./src/freertos_hello_world.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: lab1proj2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab1proj2.elf  |tee "lab1proj2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  81920	   3448	  89472	 174840	  2aaf8	lab1proj2.elf
+'Finished building: lab1proj2.elf.size'
+' '
+01:41:35 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:299:7: warning: unused variable 'm_s_b' [-Wunused-variable]
+   u32 m_s_b = SSD_decode(msb, 1);
+       ^~~~~
+../src/freertos_hello_world.c:298:7: warning: unused variable 'l_s_b' [-Wunused-variable]
+   u32 l_s_b = SSD_decode(lsb, 0);
+       ^~~~~
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: lab1proj2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab1proj_bsp/ps7_cortexa9_0/lib -o "lab1proj2.elf"  ./src/freertos_hello_world.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: lab1proj2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab1proj2.elf  |tee "lab1proj2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  82008	   3448	  89472	 174928	  2ab50	lab1proj2.elf
+'Finished building: lab1proj2.elf.size'
+' '
+01:41:43 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:299:7: warning: unused variable 'm_s_b' [-Wunused-variable]
+   u32 m_s_b = SSD_decode(msb, 1);
+       ^~~~~
+../src/freertos_hello_world.c:298:7: warning: unused variable 'l_s_b' [-Wunused-variable]
+   u32 l_s_b = SSD_decode(lsb, 0);
+       ^~~~~
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: lab1proj2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab1proj_bsp/ps7_cortexa9_0/lib -o "lab1proj2.elf"  ./src/freertos_hello_world.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: lab1proj2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab1proj2.elf  |tee "lab1proj2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  82008	   3448	  89472	 174928	  2ab50	lab1proj2.elf
+'Finished building: lab1proj2.elf.size'
+' '
+01:42:17 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:298:7: warning: unused variable 'm_s_b' [-Wunused-variable]
+   u32 m_s_b = SSD_decode(msb, 1);
+       ^~~~~
+../src/freertos_hello_world.c:297:7: warning: unused variable 'l_s_b' [-Wunused-variable]
+   u32 l_s_b = SSD_decode(lsb, 0);
+       ^~~~~
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: lab1proj2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab1proj_bsp/ps7_cortexa9_0/lib -o "lab1proj2.elf"  ./src/freertos_hello_world.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: lab1proj2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab1proj2.elf  |tee "lab1proj2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  82008	   3448	  89472	 174928	  2ab50	lab1proj2.elf
+'Finished building: lab1proj2.elf.size'
+' '
+01:48:22 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: lab1proj2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab1proj_bsp/ps7_cortexa9_0/lib -o "lab1proj2.elf"  ./src/freertos_hello_world.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: lab1proj2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab1proj2.elf  |tee "lab1proj2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  82008	   3448	  89472	 174928	  2ab50	lab1proj2.elf
+'Finished building: lab1proj2.elf.size'
+' '
+01:48:31 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: lab1proj2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab1proj_bsp/ps7_cortexa9_0/lib -o "lab1proj2.elf"  ./src/freertos_hello_world.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: lab1proj2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab1proj2.elf  |tee "lab1proj2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  82008	   3448	  89472	 174928	  2ab50	lab1proj2.elf
+'Finished building: lab1proj2.elf.size'
+' '
+01:49:05 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: lab1proj2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab1proj_bsp/ps7_cortexa9_0/lib -o "lab1proj2.elf"  ./src/freertos_hello_world.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: lab1proj2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab1proj2.elf  |tee "lab1proj2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  82008	   3448	  89472	 174928	  2ab50	lab1proj2.elf
+'Finished building: lab1proj2.elf.size'
+' '
+01:49:30 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: lab1proj2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab1proj_bsp/ps7_cortexa9_0/lib -o "lab1proj2.elf"  ./src/freertos_hello_world.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: lab1proj2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab1proj2.elf  |tee "lab1proj2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  82008	   3448	  89472	 174928	  2ab50	lab1proj2.elf
+'Finished building: lab1proj2.elf.size'
+' '
+01:49:52 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: lab1proj2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab1proj_bsp/ps7_cortexa9_0/lib -o "lab1proj2.elf"  ./src/freertos_hello_world.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: lab1proj2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab1proj2.elf  |tee "lab1proj2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  82008	   3448	  89472	 174928	  2ab50	lab1proj2.elf
+'Finished building: lab1proj2.elf.size'
+' '

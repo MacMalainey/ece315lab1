@@ -1014,3 +1014,9 @@ con
 
 14:28:00 INFO  : Launch script is exported to file '/home/macmala/Documents/Courses/ECE315/labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_on_local.tcl'
 15:27:00 INFO  : Disconnected from the channel tcfchan#20.
+16:09:57 INFO  : Registering command handlers for SDK TCF services
+16:09:58 INFO  : Launching XSCT server: xsct.bat -interactive C:\ECE_315\ece315lab1\kypd_ssd_gpio.sdk\temp_xsdb_launch_script.tcl
+16:10:01 INFO  : XSCT server has started successfully.
+16:10:01 INFO  : Successfully done setting XSCT server connection channel  
+16:10:03 INFO  : Successfully done setting SDK workspace  
+16:10:03 INFO  : Processing command line option -hwspec C:/ECE_315/ece315lab1/kypd_ssd_gpio.sdk/design_1_wrapper.hdf.
