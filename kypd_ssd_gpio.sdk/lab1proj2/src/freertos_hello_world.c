@@ -107,7 +107,7 @@ int main (void)
 
   /*************************************/
   //Set the directions of the buttons and SSD GPIO peripherals here
-  XGpio_SetDataDirection(&BTNInst, 0, 0xFF);
+  XGpio_SetDataDirection(&BTNInst, 1, 0xFF);
   XGpio_SetDataDirection(&SSDInst, 1, 0x00);
 
   /*************************************/
@@ -121,7 +121,7 @@ int main (void)
     			( const char * ) "Tx", 		/* Text name for the task, provided to assist debugging only. */
     			configMINIMAL_STACK_SIZE, 	/* The stack allocated to the task. */
     			NULL, 						/* The task parameter is not used, so set to NULL. */
-    			tskIDLE_PRIORITY+2,			/* The task runs at the idle priority. */
+    			tskIDLE_PRIORITY + 2,		/* The task runs at the idle priority. */
     			&xTxTask );
 
   xTaskCreate( prvRxTask,
@@ -181,9 +181,9 @@ static void prvTxTask( void *pvParameters )
 	    	  // enter the function to dynamically change the priority when queue is full. This way when the queue is full here, we change the priority of this task.
 	    	  // and hence queue will be read in the receive task to perform the operation. If you change the priority here dynamically, make sure in the receive task to do the counter part!!!
 	    	  /*********************************/
-
+	    	  xil_printf("The queue is full!\r\n");
 	    	  // sets the receive task to be higher than the current task
-	    	  vTaskPrioritySet(xRxTask, uxPriority + 1);
+	    	  vTaskPrioritySet(xRxTask, uxPriority + 2);
 
 	      }
 
@@ -237,12 +237,13 @@ static void prvRxTask( void *pvParameters )
 	UBaseType_t uxPriority;
 	uxPriority = uxTaskPriorityGet( NULL );
 
+	xil_printf("Reached RX task");
 	for( ;; )
 	{
 		u32 store_operands[2];
 		int result=0;
 
-		unsigned int btn_value;
+		unsigned int btn_value = 0;
 
 		/***************************************/
 		//write the code to read the queue values which store two operands for the calculation here.
@@ -251,30 +252,27 @@ static void prvRxTask( void *pvParameters )
 		xQueueReceive(xQueue, store_operands, 0);
 		xQueueReceive(xQueue, store_operands + 1, 0);
 
-		/***************************************/
-		//read the btn value here to check what user has pressed (^/|/&/%) and store it in say "btn_value" variable declared in this task
-		//For btn(3:0) --> "1000" is for %, "0100" is for &, "0010" is for | and "0001" is for ^
-		/***************************************/
-		btn_value = XGpio_DiscreteRead(&BTNInst, 0);
+
+		while (btn_value == 0) {
+			/***************************************/
+			//read the btn value here to check what user has pressed (^/|/&/%) and store it in say "btn_value" variable declared in this task
+			//For btn(3:0) --> "1000" is for %, "0100" is for &, "0010" is for | and "0001" is for ^
+			/***************************************/
+			btn_value = XGpio_DiscreteRead(&BTNInst, 1);
+		}
 
 		//keep the button pressed for your choice of the arithmetic/logical operation
 		switch(btn_value){
-		case 1: result=store_operands[0]^store_operands[1]; break;
-		/*****************************************************************************************/
-		//add the remaining cases here
-		//you may also use the default case to display nothing or some prompt message saying that no operation selected by user.
-		//in the case when no operation is selected, exit this task and go back to the TxTask if you want.
-		//you may also wait here until the user selects any operation, later on perform the calculation and then go to the TxTask.
-		/*****************************************************************************************/
-		case 2: result=store_operands[0]|store_operands[1]; break;
-		case 4: result=store_operands[0]&store_operands[1]; break;
-		case 8: result=store_operands[0]%store_operands[1]; break;
-		default: {
-			xil_printf("No operation selected");
-
-			// go back to Txtask by setting this task's priority to be lower
-			vTaskPrioritySet( xTxTask, ( uxPriority + 1 ) );
-		}
+			case 1: result=store_operands[0]^store_operands[1]; break;
+			/*****************************************************************************************/
+			//add the remaining cases here
+			//you may also use the default case to display nothing or some prompt message saying that no operation selected by user.
+			//in the case when no operation is selected, exit this task and go back to the TxTask if you want.
+			//you may also wait here until the user selects any operation, later on perform the calculation and then go to the TxTask.
+			/*****************************************************************************************/
+			case 2: result=store_operands[0]|store_operands[1]; break;
+			case 4: result=store_operands[0]&store_operands[1]; break;
+			case 8: result=store_operands[0]%store_operands[1]; break;
 		}
 
 		xil_printf("Operation result = %d\n\n",result);
@@ -319,7 +317,7 @@ static void prvRxTask( void *pvParameters )
 		XGpio_DiscreteWrite(&SSDInst, 1, 0b10000000);
 
 		//we are now done doing the calculation so again go back to the task 1 (TxTask) to get the new inputs!
-		vTaskPrioritySet( xTxTask, ( uxPriority + 1 ) );
+		vTaskPrioritySet( xRxTask, ( uxPriority - 2 ) );
 
 	}
 }

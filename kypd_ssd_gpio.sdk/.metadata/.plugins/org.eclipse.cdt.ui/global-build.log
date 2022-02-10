@@ -2185,3 +2185,415 @@ arm-none-eabi-size lab1proj2.elf  |tee "lab1proj2.elf.size"
   82008	   3448	  89472	 174928	  2ab50	lab1proj2.elf
 'Finished building: lab1proj2.elf.size'
 ' '
+14:25:56 **** Incremental Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:26:57 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: lab1proj2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab1proj_bsp/ps7_cortexa9_0/lib -o "lab1proj2.elf"  ./src/freertos_hello_world.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: lab1proj2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab1proj2.elf  |tee "lab1proj2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  82008	   3448	  89472	 174928	  2ab50	lab1proj2.elf
+'Finished building: lab1proj2.elf.size'
+' '
+14:31:46 **** Incremental Build of configuration Debug for project lab1proj ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:34:19 **** Incremental Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:35:43 **** Incremental Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:37:05 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: lab1proj2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab1proj_bsp/ps7_cortexa9_0/lib -o "lab1proj2.elf"  ./src/freertos_hello_world.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: lab1proj2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab1proj2.elf  |tee "lab1proj2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  82008	   3448	  89472	 174928	  2ab50	lab1proj2.elf
+'Finished building: lab1proj2.elf.size'
+' '
+14:37:18 **** Incremental Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:39:02 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: lab1proj2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab1proj_bsp/ps7_cortexa9_0/lib -o "lab1proj2.elf"  ./src/freertos_hello_world.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: lab1proj2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab1proj2.elf  |tee "lab1proj2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  82016	   3448	  89472	 174936	  2ab58	lab1proj2.elf
+'Finished building: lab1proj2.elf.size'
+' '
+14:39:08 **** Incremental Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:39:45 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: lab1proj2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab1proj_bsp/ps7_cortexa9_0/lib -o "lab1proj2.elf"  ./src/freertos_hello_world.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: lab1proj2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab1proj2.elf  |tee "lab1proj2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  82008	   3448	  89472	 174928	  2ab50	lab1proj2.elf
+'Finished building: lab1proj2.elf.size'
+' '
+14:39:55 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: lab1proj2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab1proj_bsp/ps7_cortexa9_0/lib -o "lab1proj2.elf"  ./src/freertos_hello_world.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: lab1proj2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab1proj2.elf  |tee "lab1proj2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  82016	   3448	  89472	 174936	  2ab58	lab1proj2.elf
+'Finished building: lab1proj2.elf.size'
+' '
+14:40:01 **** Incremental Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:40:50 **** Incremental Build of configuration Debug for project lab1proj ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:42:25 **** Incremental Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:43:44 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: lab1proj2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab1proj_bsp/ps7_cortexa9_0/lib -o "lab1proj2.elf"  ./src/freertos_hello_world.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: lab1proj2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab1proj2.elf  |tee "lab1proj2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  82008	   3448	  89472	 174928	  2ab50	lab1proj2.elf
+'Finished building: lab1proj2.elf.size'
+' '
+14:45:01 **** Incremental Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:48:14 **** Incremental Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:53:27 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: lab1proj2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab1proj_bsp/ps7_cortexa9_0/lib -o "lab1proj2.elf"  ./src/freertos_hello_world.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: lab1proj2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab1proj2.elf  |tee "lab1proj2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  82048	   3448	  89472	 174968	  2ab78	lab1proj2.elf
+'Finished building: lab1proj2.elf.size'
+' '
+14:53:35 **** Incremental Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:54:42 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: lab1proj2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab1proj_bsp/ps7_cortexa9_0/lib -o "lab1proj2.elf"  ./src/freertos_hello_world.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: lab1proj2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab1proj2.elf  |tee "lab1proj2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  82048	   3448	  89472	 174968	  2ab78	lab1proj2.elf
+'Finished building: lab1proj2.elf.size'
+' '
+14:54:49 **** Incremental Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:56:11 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: lab1proj2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab1proj_bsp/ps7_cortexa9_0/lib -o "lab1proj2.elf"  ./src/freertos_hello_world.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: lab1proj2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab1proj2.elf  |tee "lab1proj2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  81960	   3448	  89472	 174880	  2ab20	lab1proj2.elf
+'Finished building: lab1proj2.elf.size'
+' '
+14:57:28 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:261:20: warning: comparison between pointer and integer
+   while (btn_value == NULL) {
+                    ^~
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: lab1proj2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab1proj_bsp/ps7_cortexa9_0/lib -o "lab1proj2.elf"  ./src/freertos_hello_world.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: lab1proj2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab1proj2.elf  |tee "lab1proj2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  82024	   3448	  89472	 174944	  2ab60	lab1proj2.elf
+'Finished building: lab1proj2.elf.size'
+' '
+14:57:32 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:261:20: warning: comparison between pointer and integer
+   while (btn_value == NULL) {
+                    ^~
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: lab1proj2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab1proj_bsp/ps7_cortexa9_0/lib -o "lab1proj2.elf"  ./src/freertos_hello_world.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: lab1proj2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab1proj2.elf  |tee "lab1proj2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  82024	   3448	  89472	 174944	  2ab60	lab1proj2.elf
+'Finished building: lab1proj2.elf.size'
+' '
+14:58:02 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:261:21: warning: the comparison will always evaluate as 'false' for the address of 'btn_value' will never be NULL [-Waddress]
+   while (&btn_value == NULL) {
+                     ^~
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: lab1proj2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab1proj_bsp/ps7_cortexa9_0/lib -o "lab1proj2.elf"  ./src/freertos_hello_world.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: lab1proj2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab1proj2.elf  |tee "lab1proj2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  81832	   3448	  89472	 174752	  2aaa0	lab1proj2.elf
+'Finished building: lab1proj2.elf.size'
+' '
+14:59:11 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: lab1proj2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab1proj_bsp/ps7_cortexa9_0/lib -o "lab1proj2.elf"  ./src/freertos_hello_world.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: lab1proj2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab1proj2.elf  |tee "lab1proj2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  82024	   3448	  89472	 174944	  2ab60	lab1proj2.elf
+'Finished building: lab1proj2.elf.size'
+' '
+14:59:19 **** Incremental Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+15:01:20 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: lab1proj2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab1proj_bsp/ps7_cortexa9_0/lib -o "lab1proj2.elf"  ./src/freertos_hello_world.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: lab1proj2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab1proj2.elf  |tee "lab1proj2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  82024	   3448	  89472	 174944	  2ab60	lab1proj2.elf
+'Finished building: lab1proj2.elf.size'
+' '
+15:03:01 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: lab1proj2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab1proj_bsp/ps7_cortexa9_0/lib -o "lab1proj2.elf"  ./src/freertos_hello_world.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: lab1proj2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab1proj2.elf  |tee "lab1proj2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  82024	   3448	  89472	 174944	  2ab60	lab1proj2.elf
+'Finished building: lab1proj2.elf.size'
+' '
+15:05:42 **** Auto Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab1proj_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: lab1proj2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab1proj_bsp/ps7_cortexa9_0/lib -o "lab1proj2.elf"  ./src/freertos_hello_world.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: lab1proj2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab1proj2.elf  |tee "lab1proj2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  82024	   3448	  89472	 174944	  2ab60	lab1proj2.elf
+'Finished building: lab1proj2.elf.size'
+' '
+15:05:48 **** Incremental Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+15:06:23 **** Incremental Build of configuration Debug for project lab1proj2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.

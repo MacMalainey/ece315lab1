@@ -1,12 +1,12 @@
 #-----------------------------------------------------------
 # Webtalk v2019.1 (64-bit)
-# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # 
-# Start of session at: Mon Jan 31 15:27:01 2022
-# Process ID: 25862
-# Current directory: /home/macmala/Documents/Courses/ECE315/labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/webtalk
-# Command line: wbtcv -mode batch -source sdk_webtalk.tcl
-# Log file: /home/macmala/Documents/Courses/ECE315/labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/webtalk/webtalk.log
-# Journal file: /home/macmala/Documents/Courses/ECE315/labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/webtalk/webtalk.jou
+# Start of session at: Thu Feb 10 02:06:16 2022
+# Process ID: 37044
+# Current directory: C:/ECE_315/ece315lab1/kypd_ssd_gpio.sdk/webtalk
+# Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
+# Log file: C:/ECE_315/ece315lab1/kypd_ssd_gpio.sdk/webtalk/webtalk.log
+# Journal file: C:/ECE_315/ece315lab1/kypd_ssd_gpio.sdk/webtalk\webtalk.jou
 #-----------------------------------------------------------
 source sdk_webtalk.tcl

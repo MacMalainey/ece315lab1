@@ -1020,3 +1020,10 @@ con
 16:10:01 INFO  : Successfully done setting XSCT server connection channel  
 16:10:03 INFO  : Successfully done setting SDK workspace  
 16:10:03 INFO  : Processing command line option -hwspec C:/ECE_315/ece315lab1/kypd_ssd_gpio.sdk/design_1_wrapper.hdf.
+14:23:27 INFO  : Registering command handlers for SDK TCF services
+14:23:30 INFO  : Launching XSCT server: xsct.bat -interactive C:\ECE_315\ece315lab1\kypd_ssd_gpio.sdk\temp_xsdb_launch_script.tcl
+14:23:37 INFO  : XSCT server has started successfully.
+14:23:44 INFO  : Successfully done setting XSCT server connection channel  
+14:23:44 INFO  : Successfully done setting SDK workspace  
+14:23:44 INFO  : Processing command line option -hwspec C:/ECE_315/ece315lab1/kypd_ssd_gpio.sdk/design_1_wrapper.hdf.
+14:23:44 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_1.

@@ -6,10 +6,14 @@
 # Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 # 
 
+echo "This script was generated under a different operating system."
+echo "Please update the PATH and LD_LIBRARY_PATH variables below, before executing this script"
+exit
+
 if [ -z "$PATH" ]; then
-  PATH=/home/macmala/tools/Xilinx/SDK/2019.1/bin:/home/macmala/tools/Xilinx/Vivado/2019.1/ids_lite/ISE/bin/lin64:/home/macmala/tools/Xilinx/Vivado/2019.1/bin
+  PATH=C:/Xilinx/SDK/2019.1/bin;C:/Xilinx/Vivado/2019.1/ids_lite/ISE/bin/nt64;C:/Xilinx/Vivado/2019.1/ids_lite/ISE/lib/nt64:C:/Xilinx/Vivado/2019.1/bin
 else
-  PATH=/home/macmala/tools/Xilinx/SDK/2019.1/bin:/home/macmala/tools/Xilinx/Vivado/2019.1/ids_lite/ISE/bin/lin64:/home/macmala/tools/Xilinx/Vivado/2019.1/bin:$PATH
+  PATH=C:/Xilinx/SDK/2019.1/bin;C:/Xilinx/Vivado/2019.1/ids_lite/ISE/bin/nt64;C:/Xilinx/Vivado/2019.1/ids_lite/ISE/lib/nt64:C:/Xilinx/Vivado/2019.1/bin:$PATH
 fi
 export PATH
 
@@ -20,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/macmala/Documents/Courses/ECE315/labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.runs/impl_1'
+HD_PWD='C:/ECE_315/ece315lab1/kypd_ssd_gpio.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -37,7 +41,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .write_bitstream.begin.rst
+/bin/touch .init_design.begin.rst
 EAStep vivado -log design_1_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
 
 
