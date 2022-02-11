@@ -82,6 +82,7 @@ u32 SSD_decode(u8 key_value, u8 cathode){
 	case 7: if(cathode==0) return 0b00000111; else return 0b10000111;
 	case 8: if(cathode==0) return 0b01111111; else return 0b11111111;
 	case 9: if(cathode==0) return 0b01101111; else return 0b11101111;
+	case '-': if(cathode==0) return 0b01000000; else return 0b11000000;
 	default:if(cathode==0) return 0b00000000; else return 0b00000000;
 	}
 }
@@ -155,7 +156,7 @@ static void prvTxTask( void *pvParameters )
 	   u16 keystate;
 	   XStatus status, last_status = KYPD_NO_KEY;
 	   u8 key, last_key = 'x', store_key = 'x';
-	   u32 key_stroke_on_SSD=0;
+	   u32 key_stroke_on_SSD=0, operand = 0;
 
 	   // Initial value of last_key cannot be contained in loaded KEYTABLE string
 	   Xil_Out32(myDevice.GPIO_addr, 0xF);
@@ -183,7 +184,7 @@ static void prvTxTask( void *pvParameters )
 	    	  /*********************************/
 	    	  xil_printf("The queue is full!\r\n");
 	    	  // sets the receive task to be higher than the current task
-	    	  vTaskPrioritySet(xRxTask, uxPriority + 2);
+	    	  vTaskPrioritySet(xRxTask, tskIDLE_PRIORITY + 2);
 
 	      }
 
@@ -217,9 +218,8 @@ static void prvTxTask( void *pvParameters )
 						 //here you write the Queue function to store the value of the last key pressed before 'E'
 						 //hint: a variable is being used in this task that keeps the track of this key value (key presses before 'E')
 						 /****************************************/
-
-						 //TODO: how to know how much time to delay
-						 xQueueSendToBack(xQueue, &store_key, 0);
+						 operand = (u32) store_key - 48;
+						 xQueueSendToBack(xQueue, &operand, 0);
 					}
 				 }
 	      }
@@ -237,7 +237,6 @@ static void prvRxTask( void *pvParameters )
 	UBaseType_t uxPriority;
 	uxPriority = uxTaskPriorityGet( NULL );
 
-	xil_printf("Reached RX task");
 	for( ;; )
 	{
 		u32 store_operands[2];
@@ -261,36 +260,42 @@ static void prvRxTask( void *pvParameters )
 			btn_value = XGpio_DiscreteRead(&BTNInst, 1);
 		}
 
+		u32 op1 = store_operands[0], op2 = store_operands[1];
+		xil_printf("Operands: %u %u", op1, op2);
+
 		//keep the button pressed for your choice of the arithmetic/logical operation
 		switch(btn_value){
-			case 1: result=store_operands[0]^store_operands[1]; break;
+			case 1: result=op1^op2; break;
 			/*****************************************************************************************/
 			//add the remaining cases here
 			//you may also use the default case to display nothing or some prompt message saying that no operation selected by user.
 			//in the case when no operation is selected, exit this task and go back to the TxTask if you want.
 			//you may also wait here until the user selects any operation, later on perform the calculation and then go to the TxTask.
 			/*****************************************************************************************/
-			case 2: result=store_operands[0]|store_operands[1]; break;
-			case 4: result=store_operands[0]&store_operands[1]; break;
-			case 8: result=store_operands[0]%store_operands[1]; break;
+			case 2: result=op1|op2; break;
+			case 4: result=op1&op2; break;
+			case 8: result = (op2 == 0) ? -1 : op1%op2; break;
+
 		}
 
-		xil_printf("Operation result = %d\n\n",result);
+
 
 		//Once the result is computed, we wish to display it on SSD
 		//the following logic is to extract the digits from the result. For example, 9x9=81 so we will first display 1 on right SSD and then 8 on the left SSD!
 		//please note that our operands are between 0 to 9 only. The result will never exceed a two-digit number in any case.
 
 		if(result<0)
-			xil_printf("Result is less than zero!!!\n");
+			xil_printf("Invalid Operation\n");
+		else
+			xil_printf("Operation result = %d\n\n",result);
 
 
 		vTaskDelay(pdMS_TO_TICKS(1500)); //this delay is merely to introduce the visual difference between the input operands and the output result!
 
 
 		//Compute MSB and LSB digits for 2-digit output
-		u8 lsb = result % 10;
-		u8 msb = result / 10;
+		u8 lsb = result >= 0 ? result % 10 : 1;
+		u8 msb = result >= 0 ? result / 10 : '-';
 
 		u32 l_s_b = SSD_decode(lsb, 0);
 		u32 m_s_b = SSD_decode(msb, 1);
@@ -302,7 +307,7 @@ static void prvRxTask( void *pvParameters )
 		//If you found out the appropriate frequency value in the previous part1, that might help!
 		/**********************************************************************************/
 		// TODO: how to display result for only 100 Cycles
-		for( ; ; ) {
+		for(u32 i = 0; i < 100; i++) {
 			// lsb displayed on right side
 			XGpio_DiscreteWrite(&SSDInst, 1, l_s_b);
 			vTaskDelay(pdMS_TO_TICKS(16));
@@ -317,8 +322,7 @@ static void prvRxTask( void *pvParameters )
 		XGpio_DiscreteWrite(&SSDInst, 1, 0b10000000);
 
 		//we are now done doing the calculation so again go back to the task 1 (TxTask) to get the new inputs!
-		vTaskPrioritySet( xRxTask, ( uxPriority - 2 ) );
-
+		vTaskPrioritySet( xRxTask, ( tskIDLE_PRIORITY + 1 ) );
 	}
 }
 
